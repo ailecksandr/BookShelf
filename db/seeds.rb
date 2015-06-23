@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Product.delete_all
+Product.create(
+           title: 'Hello, niggaz!',
+           description: %{Swagga book for swagga dudes.},
+           image_url: "http://png-images.ru/wp-content/uploads/2015/01/book_PNG2116.png",
+           price: 1488.228
+)
