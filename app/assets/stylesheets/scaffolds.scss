@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-image:url('background.jpg');
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -18,14 +18,17 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
-  &:visited {
-    color: #666;
+a{
+  color:inherit;
+  font-style:italic;
+  font-size:24px;
+  font-weight: bold;
+  &:visited{
+    color:inherit;
   }
-  &:hover {
-    color: #fff;
-    background-color: #000;
+  &:hover{
+    color:#c1e2b3;
+    text-decoration:none;
   }
 }
 
@@ -52,7 +55,8 @@ div {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-  h2 {
+
+h2 {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
@@ -62,7 +66,8 @@ div {
     background-color: #c00;
     color: #fff;
   }
-  ul li {
+
+ul li {
     font-size: 12px;
     list-style: square;
   }

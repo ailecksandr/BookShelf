@@ -1,3 +1,84 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.centerify{
+  text-align: center;
+}
+
+.container-fluid{
+  padding:0;
+  margin-right:0;
+  line-height:29px;
+}
+
+.container{
+  width:100%;
+  padding:0;
+}
+
+.row{
+  margin-top:15px;
+  border:2px;
+  border-color:#000;
+  border-style:solid;
+  width:100%;
+  padding:0;
+  margin-left:0;
+}
+
+.row .row{
+  border:0px;
+  margin-top:15px;
+  margin-bottom:15px;
+  vertical-align: middle;
+}
+
+img{
+  max-height:256px;
+  max-width:256px;
+}
+
+.image img{
+  max-width:128px;
+  max-height:128px;
+}
+
+.title{
+  font-size:32px;
+  font-style:italic;
+}
+
+.product{
+  height:160px;
+}
+
+.image{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height:162px;
+  border-right-style:solid;
+}
+
+.window{
+  margin-top:75px;
+}
+
+.space{
+  margin-left:15px;
+}
+
+.spacedown{
+  margin-bottom:25px;
+}
+
+.window .row{
+  border:0px;
+}
+
+.price{
+  margin-top:25px;
+  text-align: right;
+  font-size:16px;
+  font-weight: bold;
+}
