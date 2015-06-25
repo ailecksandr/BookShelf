@@ -1,6 +1,7 @@
 body {
   background-image:url('background.jpg');
   color: #333;
+  width:1366px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -43,32 +44,44 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+  color: red;
+  font-weight: bold;
 }
 
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-
-h2 {
-    text-align: left;
+#error_explanation h1{
+    color: #5bc0de;
+    font-size:12px;
     font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
-  }
+}
 
-ul li {
-    font-size: 12px;
-    list-style: square;
-  }
+.centerify{
+  text-align: center;
+}
+
+.window .row{
+  border:0px;
+  margin-bottom:15px;
+}
+
+.container-fluid{
+  padding:0;
+  margin-right:0;
+  line-height:29px;
+  margin-bottom:60px;
+}
+
+.window .container-fluid{
+  background-image: url('4.jpg');
+  border:2px;
+  margin-top:60px;
+  border-color:#000;
+  border-style:solid;
+}
+
+.spacedown{
+  margin-bottom:25px;
+}
+
+.buttons{
+  padding-bottom:10px;
 }
