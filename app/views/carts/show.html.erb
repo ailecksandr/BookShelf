@@ -1,0 +1,44 @@
+<div class="window">
+  <div class="container-fluid">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <div class="container">
+      <div class="spacedown">
+        <% if notice %>
+          <div class="centerify">
+            <div class="row">
+                <div class="notice">
+                    <h1>You just added "<%= @cart.line_items[-1].product.title %>"</h1>
+                </div>
+            </div>
+          </div>
+        <% end %>
+
+        <div class="centerify">
+            <div class="row">
+                <h1>Your cart:</h1>
+            </div>
+        </div>
+
+        <div class="list_of_items">
+            <% @cart.line_items.each_with_index do |item, index| %>
+                <div class="row">
+                  <div class="col-md-8">
+                    <h1><%= index+1 %>. <%= item.product.title %></h1>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="price">
+                        <h1><%= sprintf("$ %0.02f", item.product.price) %></h1>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+        </div>
+      </div>
+      </div>
+    </div>
+  <div class="col-md-2">
+    </div>
+  </div>
+</div>

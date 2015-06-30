@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Magazine</title>
+  <title>Bookshelf</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="<%= controller.controller_name %>">
+<div id="header">
+  <div class="container-fluid">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2">
+          <img src="/assets/logo.png" height="64px", width="auto">
+        </div>
+    <div class="col-md-8">
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Questions</a></li>
+      <li role="presentation"><a href="#">News</a></li>
+      <li role="presentation"><a href="#">Contact</a></li>
+    </ul>
+      </div>
+  </div>
+  </div>
+</div>
+<div id="content">
+    <%= yield %>
+</div>
+<div id="footer">
+  <div class="centerify">
+    <div class="divide">
+      <img src="/assets/divide_line.png">
+    </div>
+    <% t=Time.now%>
+    <% t.to_s %>
+    <a href="https://vk.com/kenny_killer">Alexandr Orlov, Khmelnitsky <%= t.strftime "%Y" %></a>
+  </div>
+</div>
 </body>
 </html>
