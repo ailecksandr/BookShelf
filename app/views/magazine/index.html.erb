@@ -1,2 +1,52 @@
-<h1>Magazine#index</h1>
-<p>Find me in app/views/magazine/index.html.erb</p>
+<div class="centerify">
+  <div class="spacedown">
+    <h1>Listing Products</h1>
+  </div>
+</div>
+<div class="container-fluid">
+
+    <% @products.each_with_index do |product, i| %>
+    <div class="product" style=background-image:url('/assets/<%= i%4 %>.jpg')>
+      <div class="container">
+        <div class="col-md-2">
+          <div class="image">
+          <div class="container">
+            <div class="row">
+                <img src="<%= product.image_url %>">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="container">
+            <div class="row">
+              <div class="title">
+                <%= product.title %>
+              </div>
+            </div>
+            <div class="descr">
+                <%= product.description %>
+            </div>
+            </div>
+          </div>
+        <div class="col-md-2">
+          <div class="container">
+            <div class="row">
+              <div class="to_cart">
+                <%= link_to image_tag('add_to_cart.png', onMouseover: "this.src='/assets/add_to_cart_hover.png'", onmouseout:"this.src='/assets/add_to_cart.png'"), line_items_path(product_id: product), :method => :post %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="price">
+                <%= sprintf("$ %0.02f",product.price) %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+<div class="centerify">
+</div>

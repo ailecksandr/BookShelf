@@ -1,0 +1,53 @@
+// Place all the styles related to the carts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.carts {
+
+  background-image: url('4.jpg');
+
+  #header .container-fluid {
+    background-image: url('menu_1.png');
+  }
+
+  .notice{
+    font-size:16px;
+    color:red;
+    font-style:italic;
+  }
+
+  .window .container-fluid{
+    background-image:none;
+    border:0px;
+  }
+
+  .window .container {
+    background-image: url('0.jpg');
+    background-repeat: round;
+    border:2px;
+    border-color:#000;
+    border-style:solid;
+    min-height:400px;
+    height:100%;
+  }
+
+  .list_of_items {
+    margin-left:80px;
+    margin-right:80px;
+    font-weight:bold;
+
+    h1{
+      margin:0;
+      font-size:28px;
+    }
+
+    .price {
+      margin-top:8px;
+
+      h1{
+        font-size:20px;
+      }
+
+    }
+  }
+
+}

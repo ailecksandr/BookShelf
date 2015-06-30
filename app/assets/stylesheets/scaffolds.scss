@@ -1,16 +1,22 @@
 body {
-  background-image:url('background.jpg');
   color: #333;
-  width:1366px;
+  width:1318px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding-top:15px;
+  margin-left:24px;
+  padding-bottom:15px;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+h1{
+  margin-top:0;
 }
 
 pre {
@@ -67,21 +73,54 @@ div {
   padding:0;
   margin-right:0;
   line-height:29px;
-  margin-bottom:60px;
 }
 
 .window .container-fluid{
   background-image: url('4.jpg');
+  background-repeat: round;
   border:2px;
-  margin-top:60px;
+  margin-top:24px;
   border-color:#000;
   border-style:solid;
 }
 
 .spacedown{
   margin-bottom:25px;
+  margin-top:10px;
+}
+
+.spacedown h1{
+  padding-top:8px;
 }
 
 .buttons{
   padding-bottom:10px;
+}
+
+#header ul{
+  padding-top:12px;
+}
+
+#header li {
+  margin-right: 32px;
+}
+
+#header .active a{
+  background-color:#333;
+
+}
+
+#header .container-fluid{
+  padding-top:8px;
+  padding-bottom:8px;
+}
+
+#footer a{
+  font-style:normal;
+  font-size:12px;
+}
+
+#footer h1{
+  font-style:italic;
+  font-size:12px;
 }
