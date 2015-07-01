@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   resources :line_items
-  get 'magazine/index'
-  get 'carts/index'
-
   resources :carts
   resources :products
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,5 +1,17 @@
 <div class="centerify">
   <div class="spacedown">
+    <% if notice %>
+        <div class="row">
+            <div class="col-md-10">
+            </div>
+            <div class="col-md-2">
+            <div class="notice">
+                <h1><%= notice %></h1>
+            </div>
+            </div>
+
+        </div>
+    <% end %>
     <h1>Listing Products</h1>
   </div>
 </div>
@@ -39,7 +51,7 @@
             <div class="row">
               <div class="price">
                 <%= sprintf("$ %0.02f",product.price) %>
-                </div>
+              </div>
               </div>
             </div>
           </div>
