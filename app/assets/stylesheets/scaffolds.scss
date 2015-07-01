@@ -1,5 +1,6 @@
 body {
   color: #333;
+  background-repeat:round;
   width:1318px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -43,10 +44,6 @@ div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
-}
-
-#notice {
-  color: green;
 }
 
 .field_with_errors {
@@ -123,4 +120,13 @@ div {
 #footer h1{
   font-style:italic;
   font-size:12px;
+}
+
+.notice h1{
+  font-size:16px;
+  font-style:italic;
+  margin-bottom:0;
+  padding-bottom:8px;
+  color:#b73b5f;
+  font-weight:bold;
 }
