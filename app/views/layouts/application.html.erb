@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bookshelf</title>
+  <title>BookShelf</title>
+  <link rel="shortcut icon" href="/assets/books.ico">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -16,10 +17,13 @@
         </div>
     <div class="col-md-8">
     <ul class="nav nav-pills">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Questions</a></li>
-      <li role="presentation"><a href="#">News</a></li>
-      <li role="presentation"><a href="#">Contact</a></li>
+      <li role="presentation" class="list"><%= link_to 'Home',  magazine_url%></li>
+      <li role="presentation" class="list"><a href="#">Questions</a></li>
+      <li role="presentation" class="list"><a href="#">News</a></li>
+      <li role="presentation" class="list"><a href="#">Contact</a></li>
+      <li role="presentation" class="list">
+          <%= link_to image_tag('buy.png'),  @cart, class: :buying %>
+      </li>
     </ul>
       </div>
   </div>
@@ -38,5 +42,13 @@
     <a href="https://vk.com/kenny_killer">Alexandr Orlov, Khmelnitsky <%= t.strftime "%Y" %></a>
   </div>
 </div>
+
+<% if notice %>
+    <script type="text/javascript" charset="utf-8">
+        $(function() {
+            msg.call();
+        });
+    </script>
+<% end %>
 </body>
 </html>

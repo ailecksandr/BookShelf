@@ -4,7 +4,7 @@ class CartsController < ApplicationController
 
   def invalid_cart
     logger.error "Attempt to access invalid cart #{params[:id]}"
-    redirect_to magazine_url, notice: 'Wrong cart'
+    redirect_to magazine_path, notice: 'Invalid cart'
   end
 
   # GET /carts
@@ -16,6 +16,9 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
+    if @cart.line_items.empty?
+      redirect_to magazine_path, notice: 'Your cart is empty.'
+    end
   end
 
   # GET /carts/new
@@ -64,7 +67,7 @@ class CartsController < ApplicationController
     @cart.destroy
     session[:cart_id]=nil
     respond_to do |format|
-      format.html { redirect_to magazine_url, notice: 'Your cart is currently empty' }
+      format.html { redirect_to magazine_path, notice: 'Your cart has been cleared' }
       format.json { head :no_content }
     end
   end

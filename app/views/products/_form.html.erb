@@ -2,12 +2,12 @@
         <% if @product.errors.any? %>
             <div id="error_explanation">
 
-            <% @product.errors.full_messages.each do |message| %>
-            <div class="row">
-                <h1><%= message %></h1>
+              <ul>
+                <% @product.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
             </div>
-      <% end %>
-</div>
   <% end %>
   <div class="row">
     <%= f.label :title %><br>
