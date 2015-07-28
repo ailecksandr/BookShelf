@@ -51,9 +51,10 @@ div {
   font-weight: bold;
 }
 
-#error_explanation h1{
-    color: #5bc0de;
+#error_explanation li{
+    color: white;
     font-size:12px;
+    margin:0;
     font-weight: bold;
 }
 
@@ -102,9 +103,28 @@ div {
   margin-right: 32px;
 }
 
-#header .active a{
-  background-color:#333;
+#header .active {
+  a {
+    background-color: #333;
+  };
+}
 
+#header .container-fluid {
+  background-image: url('menu_1.png');
+}
+
+#header .buying {
+  padding: 3px;
+}
+
+#header li a:hover{
+  color:#333;
+  opacity:0.5;
+}
+
+#header .active a:hover{
+  color:#ff2f78;
+  opacity:1;
 }
 
 #header .container-fluid{
@@ -129,4 +149,33 @@ div {
   padding-bottom:8px;
   color:#b73b5f;
   font-weight:bold;
+}
+
+.window{
+  margin-top:54px;
+}
+
+.pagination *{
+  font-size:14px;
+}
+
+.pagination .current{
+  text-decoration: underline;
+}
+
+.pagination a{
+  font-weight: normal;
+}
+
+.pagination .previous_page{
+  font-weight:bold;
+}
+
+.pagination .next_page{
+  font-weight:bold;
+}
+
+.pages{
+  text-align:right;
+  margin-right:75px;
 }

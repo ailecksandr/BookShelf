@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function msg() {
+    $('.notice').stop().css({opacity: 1}).animate({opacity: 0}, 2000);
+}

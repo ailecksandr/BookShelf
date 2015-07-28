@@ -1,69 +1,19 @@
-<div class="window">
-  <div class="container-fluid">
-    <div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
-      <div class="container">
-      <div class="spacedown">
-        <% if notice %>
-          <div class="centerify">
-            <div class="row">
-                <div class="notice">
-                    <h1><%= notice %></h1>
-                </div>
-            </div>
+<% if notice %>
+<div class="centerify">
+  <div class="spacedown">
+        <div class="row">
+          <div class="col-md-9">
           </div>
-        <% end %>
-
-        <div class="centerify">
-            <div class="row">
-              <div class="col-md-11">
-                <h1>Your cart:</h1>
-              </div>
-              <div class="col-md-1">
-                 </div>
-            </div>
-        </div>
-
-        <div class="list_of_items">
-          <% sum=0 %>
-            <% @cart.line_items.each_with_index do |item, index| %>
-                <div class="row">
-                  <div class="col-md-8">
-                    <h1><%= index+1 %>. <%= item.product.title %></h1>
-                    <p>x <%=item.quantity%></p>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="price">
-                        <h1><%= sprintf("$ %0.02f", item.product.price*item.quantity) %></h1>
-                    </div>
-                  </div>
-                </div>
-              <% sum+=item.product.price*item.quantity %>
-            <% end %>
-        </div>
-        <div class="summ">
-          <div class="row">
-            <div class="col-md-4">
-                <h1>Total:</h1>
-            </div>
-            <div class="col-md-8">
-                <div class="price">
-                    <h1><%= sprintf("$ %0.02f", sum) %></h1>
-                </div>
+          <div class="col-md-3">
+            <div class="notice">
+              <h1><%= notice %></h1>
             </div>
           </div>
         </div>
-        </div>
-    </div>
-  </div>
-  <div class="clear">
-  <div class="col-md-2">
-    <%= link_to image_tag('delete.png', onMouseover: "this.src='/assets/delete_hover.png'", onmouseout:"this.src='/assets/delete.png'"), @cart, method: :delete, data: { confirm: 'Clear the cart?' } %>
-  </div>
-  </div>
-    </div>
   </div>
 </div>
+<% end %>
+
+<%= render(@cart) %>
+
 
