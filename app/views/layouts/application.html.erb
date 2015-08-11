@@ -3,30 +3,45 @@
 <head>
   <title>BookShelf</title>
   <link rel="shortcut icon" href="/assets/books.ico">
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <!-- vendor js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %>">
 <div id="header">
+  <% if session[:user_id] %>
+  <ul class="administrator">
+    <li><%= link_to 'Orders', orders_path %></li>
+    <li><%= link_to 'Products', products_path %></li>
+    <li><%= link_to 'Users', users_path %></li>
+    <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+  </ul>
+  <% end %>
   <div class="container-fluid">
+
         <div class="col-md-2">
         </div>
         <div class="col-md-2">
           <img src="/assets/logo.png" height="64px", width="auto">
         </div>
     <div class="col-md-8">
-    <ul class="nav nav-pills">
-      <li role="presentation" class="list"><%= link_to 'Home',  magazine_url%></li>
-      <li role="presentation" class="list"><a href="#">Questions</a></li>
-      <li role="presentation" class="list"><a href="#">News</a></li>
-      <li role="presentation" class="list"><a href="#">Contact</a></li>
-      <li role="presentation" class="list">
-          <%= link_to image_tag('buy.png'),  @cart, class: :buying %>
+
+    <ul class="nav nav-pills custom">
+      <li role="presentation" ><%= link_to 'Home',  magazine_url%></li>
+      <li role="presentation" ><a href="#">Questions</a></li>
+      <li role="presentation" ><a href="#">News</a></li>
+      <li role="presentation" ><a href="#">Contact</a></li>
+      <li role="presentation" >
+        <%= link_to image_tag('buy.png'),  @cart, class: :buying %>
       </li>
     </ul>
       </div>
-  </div>
+      </div>
+
   </div>
 </div>
 <div id="content">

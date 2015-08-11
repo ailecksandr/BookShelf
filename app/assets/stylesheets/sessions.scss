@@ -1,0 +1,70 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.sessions{
+  background-image:url('0.jpg');
+
+  .notice {
+    background-image:url('menu_1.png');
+    opacity:0;
+    position:fixed;
+    margin-left:25px;
+
+    h1 {
+      text-align:center;
+      color:#000;
+      margin-left:8px;
+      margin-right:8px;
+    }
+  }
+
+  #header .container-fluid {
+    background-image: url('menu.png');
+  }
+
+  .window .container-fluid{
+    background-image:none;
+    border:0;
+  }
+
+  .container-fluid .container {
+    background-image: url('4.jpg');
+    background-repeat: round;
+    border:2px;
+    border-color:#000;
+    border-style:solid;
+    height:100%;
+  }
+
+  .col-md-6{
+    margin:auto 0;
+  }
+
+  .actions{
+    margin-top:30px;
+  }
+
+  .form{
+    margin:20px auto 30px auto;
+    width:182px;
+  }
+
+  .actions input{
+    width:100px;
+  }
+
+  .actions{
+    text-align:center;
+  }
+
+  form{
+    label{
+      text-align: left;
+    }
+
+    .field{
+      padding-bottom: 10px;
+    }
+  }
+
+}

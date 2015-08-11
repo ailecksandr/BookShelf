@@ -10,7 +10,7 @@ class OrderNotifier < ApplicationMailer
   def received(order)
     @order=order
     mail(to: order.email, subject: 'BookShelf Order Confirmation') do |format|
-      format.text
+      format.html
     end
   end
 

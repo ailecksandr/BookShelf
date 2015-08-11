@@ -42,14 +42,16 @@ img{
 }
 .image {
   border-right-style:solid;
+  height:100%;
+  padding:auto;
 }
 
 .image img{
-  max-width:128px;
-  max-height:128px;
-  margin-left:25px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  max-height:100%;
+  height:100%;
+  display: block;
+  margin: auto;
+  vertical-align:middle;
 }
 
 .title{
