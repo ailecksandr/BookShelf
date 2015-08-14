@@ -18,7 +18,8 @@
     <li><%= link_to 'Orders', orders_path %></li>
     <li><%= link_to 'Products', products_path %></li>
     <li><%= link_to 'Users', users_path %></li>
-    <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+    <li class="to_right"><%= link_to image_tag('logout.png', onMouseover: "this.src='/assets/logout_hover.png'", onmouseout:"this.src='/assets/logout.png'"), logout_path, method: :delete %></li>
+    <li class="to_right"><%= link_to 'Change password', edit_user_path(User.find_by_id(session[:user_id]))  %></li>
   </ul>
   <% end %>
   <div class="container-fluid">
@@ -31,7 +32,7 @@
     <div class="col-md-8">
 
     <ul class="nav nav-pills custom">
-      <li role="presentation" ><%= link_to 'Home',  magazine_url%></li>
+      <li role="presentation" ><%= link_to 'Home',  magazine_url %></li>
       <li role="presentation" ><a href="#">Questions</a></li>
       <li role="presentation" ><a href="#">News</a></li>
       <li role="presentation" ><a href="#">Contact</a></li>

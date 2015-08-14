@@ -13,8 +13,23 @@
     background-image: url('menu.png');
   }
 
+  .notice {
+    background-image:url('menu_1.png');
+    opacity:0;
+    position:fixed;
+    float:right;
+
+    h1 {
+      text-align:center;
+      color:#000;
+      margin-left:8px;
+      margin-right:8px;
+    }
+  }
+
   .window .container-fluid{
     background-image:none;
+    margin:40px 0 60px 0;
     border:0;
   }
 
@@ -48,22 +63,6 @@
   margin-top:15px;
   margin-bottom:15px;
   vertical-align: middle;
-}
-
-img{
-  max-height:256px;
-  max-width:256px;
-}
-.image {
-  border-right-style:solid;
-}
-
-.image img{
-  max-width:128px;
-  max-height:128px;
-  margin-left:25px;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .title{
@@ -111,6 +110,10 @@ form {
     text-align:center;
   }
 }
+.actions input{
+  min-width:100px;
+}
+
 
 
 

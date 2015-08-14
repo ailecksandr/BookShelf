@@ -40,30 +40,34 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to users_path, notice: 'Successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+    if params[:password]=='' || params[:password_confirmation]=='' || params[:old_password]==''
+      redirect_to edit_user_path(@user), notice: 'Fill the fields'
+    elsif @user.authenticate(params[:old_password])
+      respond_to do |format|
+        if @user.update(user_params)
+          format.html { redirect_to magazine_url, notice: 'Password was changed' }
+          format.json { render :show, status: :ok, location: @user }
+        else
+          format.html { render :edit }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to edit_user_path(@user), notice: 'Wrong old password'
     end
   end
 
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy
-    begin
+    if @user!=User.find_by_id(session[:user_id])
       @user.destroy
-      flash[:notice] = "User \"#{@user.name}\" deleted"
-      rescue Exception => e
-          flash[:notice] = e.message
-    end
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to users_url, notice: "User \"#{@user.name}\" deleted" }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to users_url, notice: 'This is your user!'
     end
   end
 
