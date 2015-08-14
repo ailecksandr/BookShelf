@@ -99,7 +99,11 @@ div {
   padding-top:12px;
 }
 
-#header li {
+.custom li {
+  margin-right: 32px;
+}
+
+.administrator li {
   margin-right: 32px;
 }
 
@@ -205,7 +209,9 @@ div {
 
 .slider-dots{
   padding:0;
-  margin-top:10px;
+  position:absolute;
+  top:530px;
+  left:605px;
 }
 
 .dot{
@@ -215,6 +221,7 @@ div {
 
 .dot a{
   text-decoration: none;
+  font-size:38px;
 }
 
 .dot a:visited{
@@ -251,6 +258,7 @@ div {
 .administrator {
   background-color:#333;
   padding-left: 16px;
+  padding-right: 16px;
 }
 
 .administrator li{
@@ -265,6 +273,70 @@ div {
 
 .administrator a:hover{
   color:yellow;
+}
+
+.administrator .to_right{
+  float:right;
+  margin-left:32px;
+  margin-right:0;
+}
+
+#modal_form {
+  width: 700px;
+  min-height: 650px;
+  border-radius: 5px;
+  border: 3px #000 solid;
+  background-image:url('0.jpg');
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  margin-top: -325px;
+  margin-left: -350px;
+  display: none;
+  opacity: 0;
+  z-index: 5;
+  padding: 20px 10px;
+}
+
+#modal_form #modal_close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+#overlay {
+  z-index: 3;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}
+
+#counter{
+  display:none;
+}
+
+#form_image{
+  min-height:200px;
+  width:auto;
+}
+#form_description{
+  margin:50px 50px;
+  min-height:185px;
+}
+
+#form_price{
+  float:right;
+  margin:0 50px;
 }
 
 

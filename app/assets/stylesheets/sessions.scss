@@ -25,9 +25,10 @@
   .window .container-fluid{
     background-image:none;
     border:0;
+    margin:40px 0 80px 0;
   }
 
-  .container-fluid .container {
+  .container {
     background-image: url('4.jpg');
     background-repeat: round;
     border:2px;
@@ -36,16 +37,12 @@
     height:100%;
   }
 
-  .col-md-6{
-    margin:auto 0;
-  }
-
   .actions{
     margin-top:30px;
   }
 
   .form{
-    margin:20px auto 30px auto;
+    margin:0 auto 30px auto;
     width:182px;
   }
 
@@ -65,6 +62,10 @@
     .field{
       padding-bottom: 10px;
     }
+  }
+
+  .col-md-3{
+    float:right;
   }
 
 }

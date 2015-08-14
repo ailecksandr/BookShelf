@@ -13,8 +13,23 @@
     background-image: url('menu.png');
   }
 
+  .notice {
+    background-image:url('menu_1.png');
+    opacity:0;
+    position:fixed;
+    float:right;
+
+    h1 {
+      text-align:center;
+      color:#000;
+      margin-left:8px;
+      margin-right:8px;
+    }
+  }
+
   .window .container-fluid{
     background-image:none;
+    margin:40px 0 60px 0;
     border:0;
   }
 
@@ -111,6 +126,10 @@ form {
     text-align:center;
   }
 }
+.actions input{
+  min-width:100px;
+}
+
 
 
 

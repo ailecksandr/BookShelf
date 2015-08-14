@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all.paginate(page: params[:page], per_page: 3)
+    @orders = Order.all.paginate(page: params[:page], per_page: 7)
   end
 
   # GET /orders/1
@@ -25,9 +25,6 @@ class OrdersController < ApplicationController
     @order = Order.new
   end
 
-  # GET /orders/1/edit
-  def edit
-  end
 
   # POST /orders
   # POST /orders.json
