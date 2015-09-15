@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 20150805115740) do
     t.text     "description", limit: 65535
     t.string   "image_url",   limit: 255
     t.decimal  "price",                     precision: 8, scale: 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
   end
 
   create_table "users", force: :cascade do |t|

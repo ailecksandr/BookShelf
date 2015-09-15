@@ -9,6 +9,17 @@
 </div>
 <div id="overlay"></div>
 
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+  </div>
+  <div class="col-md-3">
+    <div class="notice">
+      <h1 id="notice"><%= notice %></h1>
+    </div>
+  </div>
+</div>
+
 <div class="centerify">
 
   <div class="books-slider">
@@ -21,27 +32,27 @@
 
       <div class="slider-container">
         <div class="slide active-slide">
-          <a href="7" class="view-product">
+          <a href="4" class="view-product">
             <img src="/assets/error_load.png"/>
           </a>
         </div>
         <div class="slide">
-          <a href="6" class="view-product">
+          <a href="3" class="view-product">
             <img src="/assets/test.jpg"/>
           </a>
         </div>
         <div class="slide">
-          <a href="9" class="view-product">
+          <a href="7" class="view-product">
             <img src="/assets/test1.jpg"/>
           </a>
         </div>
         <div class="slide">
-          <a href="3" class="view-product">
+          <a href="1" class="view-product">
             <img src="/assets/test2.jpg"/>
           </a>
         </div>
         <div class="slide">
-          <a href="8" class="view-product">
+          <a href="5" class="view-product">
             <img src="/assets/test3.jpg"/>
           </a>
         </div>
@@ -66,15 +77,7 @@
 
   <div class="spacedown">
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
         <h1 class="title-product">Listing Products</h1>
-      </div>
-      <div class="col-md-3">
-        <div class="notice">
-          <h1 id="notice"><%= notice %></h1>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -85,7 +88,7 @@
     <% @products.each_with_index do |product, i| %>
     <div class="product" style=background-image:url('/assets/<%= i%4 %>.jpg')>
       <div class="container">
-        <div class="col-md-2 image">
+        <div class="col-md-2 image ">
           <%=link_to image_tag(product.image_url), product %>
         </div>
         <div class="col-md-8">
@@ -133,6 +136,7 @@
           $('#form_image').attr("src", '<%= product.image_url %>');
           $('#form_description').html('<%= product.description %>');
           $('#form_price').html('<%= sprintf("$ %0.02f",product.price) %>');
+
       }
       <% end %>
       $('#overlay').fadeIn(400,

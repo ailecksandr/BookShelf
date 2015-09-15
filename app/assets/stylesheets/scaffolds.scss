@@ -249,10 +249,7 @@ div {
 .title-product{
   font-family: 'Pacifico', cursive;
   font-size:48px;
-  background-image: url('cloud.png');
-  background-repeat: round;
-  padding-bottom:40px;
-  padding-top:40px;
+  margin:40px 0 10px 0;
 }
 
 .administrator {
@@ -283,14 +280,14 @@ div {
 
 #modal_form {
   width: 700px;
-  min-height: 650px;
+  min-height: 620px;
   border-radius: 5px;
   border: 3px #000 solid;
   background-image:url('0.jpg');
   position: fixed;
   top: 45%;
   left: 50%;
-  margin-top: -325px;
+  margin-top: -310px;
   margin-left: -350px;
   display: none;
   opacity: 0;
@@ -326,12 +323,13 @@ div {
 }
 
 #form_image{
-  min-height:200px;
+  min-height:256px;
+  max-height:256px;
   width:auto;
 }
 #form_description{
-  margin:50px 50px;
-  min-height:185px;
+  margin:25px 50px 50px 50px;
+  min-height:155px;
 }
 
 #form_price{
@@ -339,6 +337,10 @@ div {
   margin:0 50px;
 }
 
+.image img{
+  height:100%;
+  margin:0;
+}
 
 
 

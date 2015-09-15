@@ -33,9 +33,9 @@
 
     <ul class="nav nav-pills custom">
       <li role="presentation" ><%= link_to 'Home',  magazine_url %></li>
-      <li role="presentation" ><a href="#">Questions</a></li>
-      <li role="presentation" ><a href="#">News</a></li>
-      <li role="presentation" ><a href="#">Contact</a></li>
+      <li role="presentation" ><%= link_to 'Questions', questions_url %></li>
+      <li role="presentation" ><%= link_to 'News', news_url %></li>
+      <li role="presentation" ><%= link_to 'Contacts', contacts_url %></li>
       <li role="presentation" >
         <%= link_to image_tag('buy.png'),  @cart, class: :buying %>
       </li>
