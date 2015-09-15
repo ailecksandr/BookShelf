@@ -19,7 +19,7 @@ class CartsController < ApplicationController
   # GET /carts/1.json
   def show
     if @cart.line_items.empty?
-      redirect_to magazine_path, notice: 'Your cart is empty.'
+      redirect_to :back, notice: 'Your cart is empty.'
     end
   end
 

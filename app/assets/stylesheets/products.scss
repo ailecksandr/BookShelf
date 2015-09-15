@@ -19,6 +19,10 @@
     opacity:1;
   }
 
+  .col-md-2{
+    padding-left:0;
+  }
+
 }
 
 .container{
@@ -44,12 +48,6 @@ img{
   border-right-style:solid;
   height:100%;
   text-align: center;
-}
-
-.image img{
-  max-height:100%;
-  height:100%;
-  margin:0;
 }
 
 .title{
