@@ -11,3 +11,10 @@
 /log/*
 !/log/.keep
 /tmp
+
+.idea
+/config/database.yml
+/Gemfile.lock
+
+# Ignore application configuration
+/config/application.yml

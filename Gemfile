@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
-gem "rails_12factor", group: :production
+# Better Errors replaces the standard Rails error page with a much better and more useful error page. Read more: https://github.com/charliesome/better_errors
+gem 'better_errors', group: :development
+
+gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.4'
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.20'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -13,6 +16,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+# Figaro was written to make it easy to securely configure Rails applications.
+gem 'figaro'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -43,6 +49,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-ruby "2.1.6"
-
-gem 'will_paginate', '~> 3.0'
+gem 'will_paginate'
